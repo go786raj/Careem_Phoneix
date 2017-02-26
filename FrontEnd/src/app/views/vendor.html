@@ -1,0 +1,91 @@
+<!--<md-content ng-controller="VendorController as vm" layout="row" layout-align="center center">
+-->
+
+<!--{{vm.vendorData}} {{ vm.myWelcome }}-->
+
+
+
+<md-content md-theme="custom" class="md-padding" layout="row" layout-sm="column">
+    <md-input-container>
+        <label>vendorName</label>
+        <input ng-model="vm.vendor.vendorName">
+    </md-input-container>
+    <md-input-container>
+        <label>contract</label>
+        <input ng-model="vm.vendor.contract" type="text">
+    </md-input-container>
+    <md-input-container>
+        <label>Location</label>
+        <input ng-model="vm.vendor.Location" type="text">
+    </md-input-container>
+    <md-input-container>
+        <label>Domain</label>
+        <input ng-model="vm.vendor.Domain" type="text">
+    </md-input-container>
+    <md-input-container>
+        <md-button class="sm-primary md-raised" ng-click="vm.showPrompt('add')">
+            Add
+        </md-button>
+    </md-input-container>
+
+</md-content>
+<!--<md-content class="md-padding">
+    <form name="userForm">
+        <div layout layout-sm="column">
+        </div>
+        <md-input-container flex>
+            <label>About us</label>
+
+        </md-input-container>
+    </form>
+</md-content>-->
+
+
+
+
+
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+
+                <th>vendorName</th>
+                <th>contract</th>
+                <th>Location</th>
+                <th>Domain</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in vm.myWelcome track by $index">
+                <td data-title="ID">{{$index + 1}}</td>
+                <td data-title="Issue">{{data.vendorName}}</td>
+                <td data-title="Status">{{data.contract}}</td>
+                <td data-title="Status">{{data.Location}}</td>
+                <td data-title="Status">{{data.Domain}}</td>
+
+                <!--<td data-title="Status">{{data.status}}</td>-->
+                <td>
+
+                    <md-button class="md-primary md-raised" ng-click="vm.removeVendor(data.id)">-</md-button>
+                    <!--<button ng-click="vm.showPrompt($event)">Add</button>-->
+
+
+
+
+                </td>
+
+
+                <td data-title="Progress">
+                    <md-progress-linear class="table-progress {{data.class}}" md-mode="determinate" value={{data.progress}}>
+                    </md-progress-linear>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!--</md-content>-->

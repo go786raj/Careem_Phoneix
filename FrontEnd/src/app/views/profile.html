@@ -1,0 +1,32 @@
+<!--<div layout-gt-md="row">-->
+
+
+
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+
+                <th>Deliverycategory</th>
+                <th>vehicleType</th>
+                <th>Wieght</th>
+                <th>Height</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in vm.myWelcome track by $index">
+                <td data-title="ID">{{$index + 1}}</td>
+                <td data-title="Issue">{{data.Deliverycategory}}</td>
+                <td data-title="Status">{{data.vehicleType}}</td>
+                <td data-title="Status">{{data.Wieght}}</td>
+                <td data-title="Status">{{data.Height}}</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!--</div>-->
